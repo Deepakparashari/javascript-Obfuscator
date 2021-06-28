@@ -4,33 +4,6 @@ var w3 = {};
 
 
 
-
-w3.getElements = function (id) {
-  if (typeof id == "object") {
-    return [id];
-  } else {
-    return document.querySelectorAll(id);
-  }
-};
-
-
-  
-
-w3.getHttpObject = function (file, func) {
-  w3.http(file, function () {
-    if (this.readyState == 4 && this.status == 200) {
-      func(JSON.parse(this.responseText));
-    }
-  });
-};
-w3.displayHttp = function (id, file) {
-  w3.http(file, function () {
-    if (this.readyState == 4 && this.status == 200) {
-      w3.displayObject(id, JSON.parse(this.responseText));
-    }
-  });
-};
-
 w3.getElementsByAttribute = function (x, att) {
   var arr = [], arrCount = -1, i, l, y = x.getElementsByTagName("*"), z = att.toUpperCase();
   l = y.length;
