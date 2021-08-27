@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: rgb(243,148,75);
+	background-color: rgb(243,148,75)!important;
 }
 
 .no-scroll-y {
